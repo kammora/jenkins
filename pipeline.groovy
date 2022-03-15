@@ -16,19 +16,19 @@ pipeline {
 
         stage('compile') {
             steps {
-                bat "./mvn compile"
+                bat "mvn compile"
             }
         }
 
         stage('test') {
             steps {
-            bat "./mvn test"
+                bat "mvn test"
             }
         }
 
         stage('package') {
             steps {
-            bat "./mvn package"
+                bat "mvn package"
             }
         }
     }
