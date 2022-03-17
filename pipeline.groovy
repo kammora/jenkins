@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('pull from github') {
             steps {
-                git url: 'https://github.com/kammora/SpringPetClinic.git'
+                git url: 'https://github.com/kammora/SpringPetClinic.git', branch: 'main'
             }
         }
         
