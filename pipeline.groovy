@@ -12,6 +12,13 @@ pipeline {
 
 
     stages {
+        stage('pull from github') {
+            steps {
+                git url: 'https://github.com/kammora/SpringPetClinic', branch: 'master'
+            }
+        }
+        
+        
         stage('clean') {
             steps {
                 bat "mvn clean"
