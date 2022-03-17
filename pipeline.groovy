@@ -12,13 +12,12 @@ pipeline {
 
 
     stages {
-        stage('fetch') {
+        stage('clean') {
             steps {
-                git url: 'https://github.com/kammora/SpringPetClinic.git', branch: 'master'
+                bat "mvn clean"
             }
         }
         
-
         stage('compile') {
             steps {
                 bat "mvn compile"
